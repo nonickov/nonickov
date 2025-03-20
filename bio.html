@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@nonickov</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Кнопка меню -->
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    
+    <!-- Выпадающее меню -->
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="page2.html" class="menu-item">Bio</a>
+        <a href="https://bio_nonickov" class="menu-item">Tg Bio</a>
+        <a href="https://t.me/nonickov" class="menu-item">Tg Account</a>
+    </div>
+
+    <div class="content-container">
+        <img src="nonickov.jpg" alt="Avatar" class="avatar">
+        <h1 style="color: white;">𝙣𝙤𝙣𝙞𝙘𝙠𝙤𝙫ଘ</h1><br>
+        <h2 style="color: white;">@nonickov</h2>
+        <div class="button-container">
+            <a href="page2.html" class="button steam" target="_blank">bio in site</a>
+            <a href="https://bio_nonickov" class="button telegram" target="_blank">bio in tg</a>
+            <a href="https://t.me/nonickov" class="button creativity" target="_blank">Tg account</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+        
+        // Закрывать меню при клике вне области
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu-btn')) {
+                document.getElementById('dropdownMenu').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
