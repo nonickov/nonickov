@@ -1,3 +1,81 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Прозрачный фон для body */
+    border: 2px solid white;
+   }
+
+
+.content-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+   
+    padding: 35px;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Стили при наведении */
+.steam:hover {
+    color: black;
+    background-color: white;
+}
+
+.telegram:hover {
+    color: black;
+    background-color: white;
+}
+
+.creativity:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Адаптивное поведение */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+}
+/* Стили для аватарки */
+.avatar {
+    width: 150px; /* Размер аватарки */
+    height: 150px; /* Размер аватарки */
+    border-radius: 50%; /* Закругление для создания круглой формы */
+    object-fit: cover; /* Убедиться, что изображение заполнит область */
+    border: 2px solid white; /* Белая граница для выделения */
+    margin-bottom: 25px; /* Отступ снизу для пространства между аватаром и ником */
+}
+
+
+
 /* Стили для меню */
 .menu-btn {
     position: fixed;
